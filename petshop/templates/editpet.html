@@ -23,18 +23,13 @@
   </div>
 
   <div class="mb-3">
-    {%if sold %}
-    <div class="form-check">
-      <label class="form-check-label" for="sold">Sold</label>
-      <input class="form-check-input" type="checkbox" value="sold" id="sold" name="sold" checked>
-    </div> 
-    {% else %} 
     <div class="form-check">
       {# TODO  Add sold checkbox here #}
-      <label class="form-check-label" for="sold">Sold</label>
-      <input class="form-check-input" type="checkbox" value="sold" id="sold" name="sold">
+      {% if not sold %}
+      <input class="form-check-label" type="checkbox" id="sold" name="sold">
+      {% endif %}
+      <label class="form-check-label" for="sold" > Sold </label>
     </div>
-    {%endif%}  
   </div>
 
   <div class="mb-3">
